@@ -1,9 +1,5 @@
-# this allows us to use code from
-# the open-source pygame library
-# throughout this file
 import pygame
 import sys
-
 from constants import *
 from player import Player
 from asteroid import Asteroid
@@ -26,7 +22,6 @@ def main():
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     asteroid_field = AsteroidField()
 
-    
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -48,7 +43,6 @@ def main():
 
         dt = clock.tick(60) / 1000
         
-
     print("Starting Asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
